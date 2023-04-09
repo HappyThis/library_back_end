@@ -1,0 +1,87 @@
+
+
+### 登陆
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "user_id": "2020123780",
+  "password": "123456"
+}
+
+### 楼层查询
+GET http://localhost:5000/seat/query_layer
+Accept: application/json
+
+### 根据楼层查id询区
+GET http://localhost:5000/seat/query_part_by_layer/1
+Accept: application/json
+
+### 根据区id查询桌
+GET http://localhost:5000/seat/query_desk_by_part/2
+Accept: application/json
+
+### 根据桌id查询凳子
+GET http://localhost:5000/seat/query_position_by_stool/20
+Accept: application/json
+
+### 登出
+POST http://localhost:5000/logout
+Accept: application/json
+Content-Type: application/json
+
+### 查询当前用户的预约
+GET http://localhost:5000/seat/query_appoint_by_user
+Accept: application/json
+
+### 预约
+POST http://localhost:5000/seat/appoint
+Content-Type: application/json
+
+{
+  "stool_id": "50"
+}
+
+### 查询凳子状态
+GET http://localhost:5000/seat/query_appoint_by_stool/50
+Accept: application/json
+
+### 取消预约
+POST http://localhost:5000/seat/cancel_appoint
+Content-Type: application/json
+
+
+### 展示一些图书
+GET http://localhost:5000/book/show_some_book/12
+Accept: application/json
+
+### 展示一个图书
+GET http://localhost:5000/book/get_book_by_id/101
+Accept: application/json
+
+### 搜索功能
+GET http://localhost:5000/book/search_book/哈利波特
+Accept: application/json
+
+### 借书
+POST http://localhost:5000/book/borrow
+Content-Type: application/json
+
+{
+  "book_id": "455"
+}
+
+### 借阅查询功能
+GET http://localhost:5000/book/query_borrow_by_user
+Accept: application/json
+
+### 归还图书
+POST http://localhost:5000/book/cancel_borrow
+Content-Type: application/json
+
+{
+  "borrow_id":4
+}
+
+
+
